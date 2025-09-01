@@ -1,0 +1,81 @@
+ :root{
+            --fonte_destaque: 'Verdana', sans-serif;
+            --cor_fundo: #91F0A5;
+            --cor_botao_limpar: 
+            --sombreamento: box-shadow: 1px 1px 10px rgb(102, 99, 99);
+            --cor_destaque: #005C53;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            max-height: 100vh;
+            font-family: Arial, serif;
+            font-size: 20px;
+            background-color: #91F0A5;
+        }
+        header{
+            text-align: center;
+            background-color: var(--cor_destaque);
+            color: #eee7e7;
+            padding: 10px;
+            margin-top: -10px;
+        }
+        h1{
+            font-size: var(--fonte_destaque);
+            font-size: 2rem;
+        }
+        form{
+            height: 65vh;
+            width: 30%;
+            margin: 50px auto;
+            background-color: var(--cor_destaque);
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: var(--sombreamento);
+        }
+        .btn{
+            background-color:var(--cor_fundo);
+            color: var(--cor_destaque);
+        }
+        label{
+            font-family: var(--fonte_destaque);
+            font-size: 1.2em;
+            color: #eee7e7;
+        }
+        input, textarea{
+            font-size: 16px;
+            padding: 10px;
+            width: 70%;
+            margin-top: 10px;
+            border-radius: 2px 5px;
+            border: none;
+            box-shadow: var(--sombreamento);
+        }
+        .btn{
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn:hover{
+            transition: 0.5s ease-in;
+            transform: scale(1.1);
+            color: #eee7e7;
+            background-color: black;
+        }
+        #logo{
+            width: 100px;
+            position: absolute;
+            right: 47%;
+            top: 24%
+        }
+        .content{
+            margin-top: 22%;
+        }
+        #btn1{
+            margin-right: 10%;
+        }
