@@ -1,0 +1,78 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #3498db;
+    --cor-secundaria: rgb(173, 144, 144);
+    --cor-fundo: #ecf0f1;
+    --cor-texto: #2c3e50;
+    --fonte-principal: bold 1.3em 'Verdana', sans-serif;
+    --fonte-secundaria: 20px 'Roboto', sans-serif;
+    --fonte-terciaria: normal 1.4em 'Roboto', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    font: var(--fonte-secundaria);  
+}
+h1{
+    color: #fff ;
+    background-color: var(--cor-principal);
+    width:  100%;
+    margin: -10px;
+    text-align: center ;
+    padding: 10px;
+    font: var(--fonte-principal);
+}
+.lista_produtos{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: var(--cor-fundo);
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.produto{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  
+h2{
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    font: var(--fonte-terciaria);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    /* background-color: var(--cor-secundaria);  */
+} 
+
+
+h2::after{
+    content: "🛒";
+    margin-left: 10px;
+    font-size: 25px;
+}
+p{
+    line-height: 1.5;
+    color: var(--cor-texto);
+    font-size: 15px;
+} 
