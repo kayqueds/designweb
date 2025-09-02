@@ -15,7 +15,6 @@
 }
 
 body{
-    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,21 +24,28 @@ body{
     font: var(--fonte-padrao);
 }
 form{
+    margin: 15px;
+    min-height: 85vh;
     box-shadow: 0px 2px 5px rgb(78, 78, 78);
-    padding: 50px;
+    padding: 30px;
     border-radius: 8px;
     text-align: center;
-    width: 40%;
+    min-width: 50%;
 }
 
 label{
-line-height: 15px;
+
+display: block;
+margin-bottom: 8px;
 }
 input{
     padding: 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 80%;
+    margin-bottom: 5px;
+    border: 1px solid var(--cor-botoes);
 }
+
 
 button{
     padding: 10px;
@@ -49,13 +55,18 @@ button{
     background-color: var(--cor-botoes);
     color: #ffff;
 }
-header{
+
+.btns{
+    margin: 5px 60px 0px 0px;
+}
+
+ header{
     padding: 20px;
     color: #ffff;
     background-color: #739EC9;
     width: 100%;
     text-align: center;
-}
+} 
 h1{
     font: var(--fonte-destaque);
 }
