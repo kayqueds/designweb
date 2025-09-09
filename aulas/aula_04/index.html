@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Simples</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <label for="sobreNome">Sobrenome:</label>
+            <input type="text" name="sobreNome" id="sobreNome" placeholder="Digite seu sobrenome" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="****" required>
+
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" min="12" required>
+             <section class="radius"></section>   
+            <label for="genero">Gênero</label>
+            <label>
+                <input type="radio" name="genero" value="masc">Maculino</label>
+            <label>
+                <input type="radio" name="genero" value="fem">Feminino
+            </label>
+            
+            <label>
+                <input type="radio" name="genero" value="s">Prefiro não informar</label>
+            </section>    
+            <label for="estado">Estado</label>
+            <select name="estados" id="estados">
+                <option>Selecione:</option>    
+                <option value="sp" id="sp">São Paulo - SP</option>    
+                <option value="rj" id="rj">Rio de Janeiro - RJ</option>    
+                <option value="mg" id="mgh">Minas Gerais - MG</option>    
+            </select>
+            <section>
+                <button type="submit">Cadastrar</button>
+            </section>
+
+
+    </form>
+
+</body>
+</html>

@@ -42,7 +42,7 @@ input{
     padding: 10px;
     border-radius: 5px;
     width: 80%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border: 1px solid var(--cor-botoes);
 }
 
