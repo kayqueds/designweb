@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rango's Chef</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="tabela.html">Tabela</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Cadastro de usuário 🧑</h2>
+      <form>
+        <div class="inputs">
+          <!--Dados pessoais-->
+          <label for="nome">Nome completo:</label>
+          <input
+            required
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Digite o seu nome"
+          />
+          <label for="email">Email:</label>
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            placeholder="exemplo@email.com"
+          />
+          <label for="data">Data:</label>
+          <input type="date" name="data" id="data" />
+        </div>
+        <div class="inputs_radio">
+          <label for="genero">Gênero</label>
+          <label for="masc">Masculino</label>
+          <input type="radio" id="masc" name="sex" />
+          <label for="fem">Feminino</label>
+          <input type="radio" id="fem" name="sex" />
+          <label for="fem">Prefiro não dizer</label>
+          <input type="radio" id="indefinido" name="sex" />
+          <select name="select" id="select">
+            <option value="">Selecione...</option>
+            <option required value="option1">Iniciante</option>
+            <option required value="option2">Intermediário</option>
+            <option required value="option3">Experiente</option>
+          </select>
+        </div>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" rows="5"> </textarea>
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </main>
+  </body>
+</html>

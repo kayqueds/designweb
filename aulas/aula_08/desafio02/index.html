@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Cliente</h1>
+  </header>
+
+  <main>
+    <form action="#" method="post" class="form-card">
+      <!-- Informações pessoais -->
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Ex.: João Silva">
+        </div>
+
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input type="number" id="cpf" name="cpf" inputmode="numeric" pattern="\d{11}" title="Digite 11 números" placeholder="Somente números" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nascimento">Data de nascimento</label>
+          <input type="date" id="nascimento" name="nascimento" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gênero</label>
+          <div class="form-inline">
+            <label><input type="radio" name="genero" value="M"> Masculino</label>
+            <label><input type="radio" name="genero" value="F"> Feminino</label>
+            <label><input type="radio" name="genero" value="N"> Prefiro não informar</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Contato -->
+      <fieldset>
+        <legend>Contato</legend>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="exemplo@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-0000">
+        </div>
+
+        <div class="form-group">
+          <label>Preferência de contato</label>
+          <div class="form-inline">
+            <label><input type="checkbox" name="contato" value="email"> E-mail</label>
+            <label><input type="checkbox" name="contato" value="telefone"> Telefone</label>
+            <label><input type="checkbox" name="contato" value="whatsapp"> WhatsApp</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Endereço -->
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" inputmode="numeric" pattern="\d{8}" placeholder="00000000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="logradouro">Logradouro</label>
+          <input type="text" id="logradouro" name="logradouro" autocomplete="address-line1">
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Número</label>
+          <input type="number" id="numero" name="numero" min="1">
+        </div>
+
+        <div class="form-group">
+          <label for="complemento">Complemento</label>
+          <input type="text" id="complemento" name="complemento">
+        </div>
+
+        <div class="form-group">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro" name="bairro" autocomplete="address-level3">
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" autocomplete="address-level2">
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="RS">RS</option>
+            <option value="BA">BA</option>
+            <!-- mais UFs -->
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Dados comerciais -->
+      <fieldset>
+        <legend>Dados Comerciais</legend>
+
+        <div class="form-group">
+          <label for="limite">Limite de crédito (R$)</label>
+          <input type="number" id="limite" name="limite" step="0.01" placeholder="0,00">
+        </div>
+
+        <div class="form-group">
+          <label for="renda">Renda mensal (R$)</label>
+          <input type="number" id="renda" name="renda" step="0.01" placeholder="0,00">
+        </div>
+
+        <div class="form-group">
+          <label for="dependentes">Número de dependentes</label>
+          <input type="number" id="dependentes" name="dependentes" min="0" value="0">
+        </div>
+      </fieldset>
+
+      <!-- Preferências -->
+      <fieldset>
+        <legend>Preferências</legend>
+
+        <div class="form-group">
+          <label><input type="checkbox" name="newsletter"> Desejo receber a newsletter</label>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria de interesse</label>
+          <select id="categoria" name="categoria">
+            <option value="">Selecione</option>
+            <option>Eletrônicos</option>
+            <option>Livros</option>
+            <option>Casa</option>
+            <option>Moda</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Botões -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Salvar cadastro</button>
+        <button type="reset" class="btn-secondary">Limpar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Seus dados estão seguros. Consulte nossa <a href="#">política de privacidade</a>.</p>
+  </footer>
+</body>
+</html>
