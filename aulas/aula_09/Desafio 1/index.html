@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta IBGE - Municípios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de Distritos - IBGE</h1>
+
+    <div class="form-group">
+      <input type="number" id="codigoMunicipio" placeholder="Digite o código do município (ex: 3550308)">
+      <button id="btnBuscar">Buscar</button>
+      <button id="btnExportarCSV" disabled>Exportar CSV</button>
+      <button id="btnExportarXLSX" disabled>Exportar Excel</button>
+    </div>
+
+    <!-- Estrutura fixa da tabela -->
+    <table id="tabelaDistritos">
+      <thead>
+        <tr>
+          <th>ID Distrito</th>
+          <th>Nome do Distrito</th>
+          <th>Município</th>
+          <th>Microrregião</th>
+          <th>Mesorregião</th>
+          <th>UF</th>
+          <th>Região</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS vai preencher aqui -->
+      </tbody>
+    </table>
+
+    <p id="mensagem" class="msg"></p>
+  </div>
+
+  <!-- Biblioteca SheetJS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
