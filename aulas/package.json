@@ -1,0 +1,16 @@
+{
+  "name": "design_web",
+  "version": "1.0.0",
+  "description": "Projeto de aulas e desafios com Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/styles.css -o ./css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["tailwind", "design", "web", "aulas"],
+  "author": "Kayque",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.18"
+  }
+}
