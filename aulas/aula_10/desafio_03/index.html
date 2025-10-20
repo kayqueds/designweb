@@ -1,71 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário de Cadastro</title>
-  <link rel="stylesheet" href="../../css/output.css">
-</head>
-<body>
-  <div>
-    <h1>Cadastro de Usuário</h1>
-    <form action="#" method="post">
-      <!-- Nome -->
-      <label for="nome">Nome completo:</label>
-      <input type="text" id="nome" name="nome" required minlength="3" placeholder="Digite seu nome completo">
+  <!--comando tailwindcss npx tailwindcss -i ./css/styles.css -o ./css/output.css --watch-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="../../css/output.css" />
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-6"
+  >
+    <div>
+      <h1 class="text-3xl font-bold text-blue-500 mb-5 text-center">
+        Cadastro de Usuário 📝
+      </h1>
+      <!-- Meu formulário -->
+      <form
+        class="container mx-auto bg-white p-8 rounded shadow-lg flex flex-col min-w-[600px] max-w-[900px]"
+        action="#"
+        method="post"
+      >
+        <!-- Nome -->
+        <label class="mb-3 mt-3 text-gray-700" for="nome">Nome completo:</label>
+        <input
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="text"
+          id="nome"
+          name="nome"
+          required
+          minlength="3"
+          placeholder="Digite seu nome completo"
+        />
 
-      <!-- Email -->
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+        <!-- Email -->
+        <label class="mb-3 mt-3 text-gray-700" for="email">E-mail:</label>
+        <input
+         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="exemplo@dominio.com"
+        />
 
-      <!-- CPF -->
-      <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" name="cpf" required 
-             pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" 
-             placeholder="000.000.000-00">
+        <!-- CPF -->
+        <label class="mb-3 mt-3 text-gray-700" for="cpf">CPF:</label>
+        <input
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="text"
+          id="cpf"
+          name="cpf"
+          required
+          pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+          placeholder="000.000.000-00"
+        />
 
-      <!-- Data de nascimento -->
-      <label for="nascimento">Data de nascimento:</label>
-      <input type="date" id="nascimento" name="nascimento" required>
+        <!-- Data de nascimento -->
+        <label class="mb-3 mt-3 text-gray-700" for="nascimento"
+          >Data de nascimento:</label
+        >
+        <input
+         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="date"
+          id="nascimento"
+          name="nascimento"
+          required
+        />
 
-      <!-- CEP -->
-      <label for="cep">CEP:</label>
-      <input type="text" id="cep" name="cep" required 
-             pattern="^\d{5}-\d{3}$" 
-             placeholder="00000-000">
+        <!-- CEP -->
+        <label class="mb-3 mt-3 text-gray-700" for="cep">CEP:</label>
+        <input
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="text"
+          id="cep"
+          name="cep"
+          required
+          pattern="^\d{5}-\d{3}$"
+          placeholder="00000-000"
+        />
 
-      <!-- Endereço -->
-      <label for="endereco">Endereço:</label>
-      <input type="text" id="endereco" name="endereco" required placeholder="Rua, nº, bairro">
+        <!-- Endereço -->
+        <label class="mb-3 mt-3 text-gray-700" for="endereco">Endereço:</label>
+        <input
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="text"
+          id="endereco"
+          name="endereco"
+          required
+          placeholder="Rua, nº, bairro"
+        />
 
-      <!-- Cidade -->
-      <label for="cidade">Cidade:</label>
-      <input type="text" id="cidade" name="cidade" required>
+        <!-- Cidade -->
+        <label class="mb-3 mt-3 text-gray-700" for="cidade">Cidade:</label>
+        <input
+          class="border border-gray-300 p-2 rounded"
+          type="text"
+          id="cidade"
+          name="cidade"
+          placeholder="Digite sua cidade"
+          required
+        />
 
-      <!-- Estado -->
-      <label for="estado">Estado:</label>
-      <select id="estado" name="estado" required>
-        <option value="">Selecione...</option>
-        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-        <option>SP</option><option>SE</option><option>TO</option>
-      </select>
+        <!-- Estado -->
+        <label class="mb-3 mt-3 text-gray-700" for="estado">Estado:</label>
+        <select class="border border-gray-300 rounded p-2 focus:outline-blue-500" id="estado" name="estado" required>
+          <option class="text-gray-500" value="">Selecione...</option>
+          <option>AC</option>
+          <option>AL</option>
+          <option>AP</option>
+          <option>AM</option>
+          <option>BA</option>
+          <option>CE</option>
+          <option>DF</option>
+          <option>ES</option>
+          <option>GO</option>
+          <option>MA</option>
+          <option>MT</option>
+          <option>MS</option>
+          <option>MG</option>
+          <option>PA</option>
+          <option>PB</option>
+          <option>PR</option>
+          <option>PE</option>
+          <option>PI</option>
+          <option>RJ</option>
+          <option>RN</option>
+          <option>RS</option>
+          <option>RO</option>
+          <option>RR</option>
+          <option>SC</option>
+          <option>SP</option>
+          <option>SE</option>
+          <option>TO</option>
+        </select>
 
-      <!-- Senha -->
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required minlength="8" placeholder="Mínimo 8 caracteres">
+        <!-- Senha -->
+        <label class="mb-3 mt-3 text-gray-700" for="senha">Senha:</label>
+        <input
+         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="password"
+          id="senha"
+          name="senha"
+          required
+          minlength="8"
+          placeholder="Mínimo 8 caracteres"
+        />
 
-      <!-- Confirmação de senha -->
-      <label for="confirmar">Confirmar senha:</label>
-      <input type="password" id="confirmar" name="confirmar" required minlength="8" placeholder="Repita a senha">
+        <!-- Confirmação de senha -->
+        <label class="mb-3 mt-3 text-gray-700" for="confirmar"
+          >Confirmar senha:</label
+        >
+        <input
+         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          type="password"
+          id="confirmar"
+          name="confirmar"
+          required
+          minlength="8"
+          placeholder="Repita a senha"
+        />
 
-      <!-- Botão -->
-      <button type="submit">Cadastrar</button>
-    </form>
-  </div>
-</body>
+        <!-- Botão -->
+        <button
+          class="w-full font-bold p-2 bg-blue-500 text-white hover:bg-blue-600 hover:scale-105 rounded transition-all mt-6"
+          type="submit"
+        >
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
