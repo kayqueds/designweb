@@ -7,11 +7,13 @@
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="../../css/output.css" />
   </head>
-  <body
-    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-6"
-  >
-    <div>
-      <h1 class="text-3xl font-bold text-blue-500 mb-5 text-center">
+  <body>
+  <!--Fundo com gradiente e centralização do conteúdo -->
+    <div
+      class="bg-gradient-to-r via-gray-300 from-gray-200 to-gray-300 flex flex-col items-center justify-center min-h-screen p-6"
+    >
+      <div>
+        <h1 class="text-3xl font-bold text-blue-500 mb-5 text-center">
         Cadastro de Usuário 📝
       </h1>
       <!-- Meu formulário -->
@@ -35,7 +37,7 @@
         <!-- Email -->
         <label class="mb-3 mt-3 text-gray-700" for="email">E-mail:</label>
         <input
-         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
           type="email"
           id="email"
           name="email"
@@ -60,7 +62,7 @@
           >Data de nascimento:</label
         >
         <input
-         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
           type="date"
           id="nascimento"
           name="nascimento"
@@ -103,7 +105,12 @@
 
         <!-- Estado -->
         <label class="mb-3 mt-3 text-gray-700" for="estado">Estado:</label>
-        <select class="border border-gray-300 rounded p-2 focus:outline-blue-500" id="estado" name="estado" required>
+        <select
+          class="border border-gray-300 rounded p-2 focus:outline-blue-500"
+          id="estado"
+          name="estado"
+          required
+        >
           <option class="text-gray-500" value="">Selecione...</option>
           <option>AC</option>
           <option>AL</option>
@@ -137,7 +144,7 @@
         <!-- Senha -->
         <label class="mb-3 mt-3 text-gray-700" for="senha">Senha:</label>
         <input
-         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
           type="password"
           id="senha"
           name="senha"
@@ -151,7 +158,7 @@
           >Confirmar senha:</label
         >
         <input
-         class="border border-gray-300 p-2 rounded focus:outline-blue-500"
+          class="border border-gray-300 p-2 rounded focus:outline-blue-500"
           type="password"
           id="confirmar"
           name="confirmar"

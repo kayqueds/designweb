@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Interativo</title>
+  <link rel="stylesheet" href="../../css/output.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex flex-col items-center min-h-screen p-4 md:p-6 transition-colors duration-300">
+  <!-- Cabeçalho -->
+  <header class="w-full max-w-4xl mx-auto flex items-center justify-between py-4 px-6 bg-gradient-to-r from-red-500 to-orange-500 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-lg mb-6">
+    <div>
+      <h1 class="text-2xl font-bold text-white">🌐 Meu Portal Interativo</h1>
+      <p class="text-sm text-red-100 dark:text-gray-300">Escolha no menu o que deseja visualizar</p>
+    </div>
+    <!-- Botão Dark Mode -->
+    <button id="darkModeToggle" class="hover:scale-105 flex items-center gap-2 px-4 py-2 bg-white/20 dark:bg-gray-700 hover:bg-white/30 dark:hover:bg-gray-600 text-white dark:text-white rounded-md text-sm font-medium transition-all">
+      🌙 Alternar Tema
+    </button>
+  </header>
+
+  <!-- Menu de Navegação -->
+  <nav class="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 px-4">
+    <a href="https://www.wikipedia.org/" target="meuIframe" class="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 hover:scale-105">
+      <span class="text-xl">📘</span>
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Wikipédia</span>
+    </a>
+    <a href="https://www.youtube.com/embed/4rWwLkwy3rg" target="meuIframe" class="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 hover:scale-105">
+      <span class="text-xl">🎬</span>
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Vídeo</span>
+    </a>
+    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.467165056785!2d-46.65657188438293!3d-23.588068468436734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8794fb9a7%3A0xb5cbe5c12e88a22b!2sPaulista%20Avenue!5e0!3m2!1sen!2sbr!4v1675707469580!5m2!1sen!2sbr" target="meuIframe" class="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 hover:scale-105">
+      <span class="text-xl">🗺️</span>
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Mapa</span>
+    </a>
+    <a href="https://pt.stackoverflow.com/" target="_blank" rel="noopener" class="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 hover:scale-105">
+      <span class="text-xl">💻</span>
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Stack Overflow</span>
+    </a>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="flex-grow w-full max-w-4xl mx-auto px-4 mb-8">
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+      <iframe name="meuIframe" src="https://www.wikipedia.org/" class="w-full h-[65vh] md:h-[70vh]"></iframe>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="w-full max-w-4xl mt-auto text-center py-4 px-6 bg-gradient-to-r from-red-500 to-orange-500 dark:from-gray-800 dark:to-gray-900 rounded-lg text-white text-sm">
+    © 2025 Meu Portal Interativo. Todos os direitos reservados.
+  </footer>
+
+  <script src="src/js/script.js"></script>
+</body>
+</html>
