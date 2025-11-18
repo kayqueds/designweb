@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Usabilidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuração Tailwind para Dark Mode e Cores Específicas
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'fitts-target': '#ff0000',
+                        'rick-bg': '#0a0a0a',
+                        'rick-text': '#f0f0f0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-rick-bg text-black dark:text-rick-text transition-colors duration-500">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-extrabold tracking-tight">Painel de Análise Delta</h1>
+
+            <button id="theme-toggle" class="p-1 rounded-full text-xs font-mono border border-fitts-target hover:bg-fitts-target hover:text-white transition-all duration-300">
+                L/N
+            </button>
+        </header>
+
+        <hr class="border-gray-300 dark:border-gray-700 mb-10">
+
+        <section class="mb-10 p-6 bg-gray-50 dark:bg-gray-900 rounded-xl shadow-2xl">
+            <h2 class="text-2xl font-semibold mb-6 text-yellow-500">Módulos de Configuração de Protocolo</h2>
+            <p class="mb-4 text-sm opacity-70">Ajuste os parâmetros dos módulos antes da inicialização. Confirme individualmente os status.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Ativar Processo 4A
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Validar Hash Z-99
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Status Vazio
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Prioridade Beta
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Desligar Cache Global
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Coeficiente $K$
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Interface Desativada
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Modo Retrô
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Enviar Log
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Excluir Filtro
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Resetar Chave $\sigma$
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Ocultar Menu
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Versão $7.1\beta$
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Desativar Estilo
+                </label>
+                <label class="flex items-center text-xs">
+                    <input type="checkbox" class="mr-2 rounded text-red-600 focus:ring-red-500"> Confirmar $p=3.14$
+                </label>
+            </div>
+        </section>
+
+        <hr class="border-gray-300 dark:border-gray-700 mb-10">
+
+        <section class="p-6 bg-gray-50 dark:bg-gray-900 rounded-xl shadow-2xl">
+            <h2 class="text-2xl font-semibold mb-6 text-yellow-500">Formulário de Entrada de Dados</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <div class="flex flex-col">
+                    <label for="campo-a" class="mb-1 font-medium text-left">Nome de Usuário (A)</label>
+                    <input type="text" id="campo-a" class="p-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-red-500 focus:border-red-500 text-left">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="campo-b" class="mb-1 font-medium text-right">Email Confirmação (B)</label>
+                    <input type="email" id="campo-b" class="p-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-red-500 focus:border-red-500 text-right">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="campo-c" class="mb-1 font-medium text-center">Código de Segurança (C)</label>
+                    <input type="password" id="campo-c" class="p-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-red-500 focus:border-red-500 text-center">
+                </div>
+
+                <div class="lg:col-span-3 mt-4 flex justify-end">
+                    <button class="px-2 py-1 text-sm bg-fitts-target text-white rounded-md hover:bg-red-700 transition-colors duration-300">
+                        Processar Dados
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-gray-300 dark:border-gray-700 mt-10 mb-10">
+
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4 text-yellow-500">Termos e Condições do Serviço</h2>
+            <div class="h-96 overflow-y-scroll scroll-smooth p-5 border border-gray-600 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <p class="text-sm opacity-70 mb-4">
+                    Este documento detalha os Termos e Condições de Uso (doravante "Termos"), que regem a utilização da plataforma e seus serviços. A aceitação destes Termos é estritamente obrigatória para o acesso e uso. Se você discordar de qualquer parte dos Termos, não deve continuar a usar a plataforma. A plataforma reserva-se o direito de modificar estes Termos a qualquer momento, sem aviso prévio. É sua responsabilidade revisar periodicamente os Termos para estar ciente de quaisquer alterações.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.1: As responsabilidades do usuário incluem, mas não se limitam a: a) Manter a confidencialidade de sua senha e conta; b) Notificar imediatamente qualquer uso não autorizado de sua conta; c) Abster-se de violar qualquer legislação local ou internacional. O não cumprimento pode resultar na suspensão ou encerramento imediato da conta.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.2: A plataforma isenta-se de responsabilidade por qualquer perda ou dano decorrente de falhas técnicas, interrupções de serviço, vírus ou ataques de negação de serviço. A garantia de disponibilidade de serviço é de "melhor esforço" e não 100%. Os dados fornecidos pelo usuário podem ser armazenados em servidores localizados fora da jurisdição original do usuário.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.3: Todo o conteúdo e materiais presentes na plataforma, incluindo, mas não se limitando a, textos, gráficos, logotipos, ícones, imagens, clipes de áudio e software, são propriedade exclusiva da plataforma ou de seus licenciadores. A cópia, reprodução, modificação, publicação, transmissão, ou distribuição de qualquer conteúdo é estritamente proibida sem consentimento prévio por escrito.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.4: O usuário concorda em indenizar e isentar a plataforma de qualquer reclamação ou demanda, incluindo honorários advocatícios razoáveis, feita por terceiros devido ou decorrente da violação destes Termos ou da violação de qualquer lei ou direito de terceiros. A jurisdição para resolução de disputas será o tribunal de [Localidade Não Especificada].
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.5: Estes Termos constituem o acordo integral entre o usuário e a plataforma e regem o uso do serviço, substituindo quaisquer acordos anteriores entre o usuário e a plataforma. Qualquer falha da plataforma em exercer ou fazer cumprir qualquer direito ou disposição destes Termos não constituirá uma renúncia a tal direito ou disposição.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.6: O uso contínuo da plataforma após quaisquer alterações nos Termos constitui sua aceitação das novas condições. Recomenda-se a leitura atenta de todas as cláusulas, incluindo as subseções não listadas aqui. A responsabilidade por entender os riscos e implicações é integralmente do usuário.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.7: A plataforma não se responsabiliza por atos ou omissões de terceiros, incluindo provedores de serviços de internet. O usuário reconhece que a Internet não é totalmente segura e que a privacidade não pode ser garantida.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.8: As informações de contato para suporte são: suporte@[domínio-fictício].com.br, com tempo de resposta garantido de até 72 horas úteis.
+                </p>
+                <p class="text-sm opacity-70 mb-4">
+                    Cláusula 1.9: A rescisão do serviço pode ser solicitada a qualquer momento, mas pode levar até 30 dias para ser processada, com retenção de dados por um período de segurança de 6 meses após a rescisão.
+                </p>
+                <div class="h-20"></div> <div class="flex justify-center mt-10 mb-20">
+                    <button class="px-2 py-1 bg-fitts-target text-white rounded-md text-xs hover:bg-red-700 transition-colors duration-300">
+                        Aceitar Termos Completos
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleButton.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                toggleButton.textContent = 'Modo Claro';
+            } else {
+                htmlElement.classList.add('dark');
+                toggleButton.textContent = 'Modo Escuro';
+            }
+        });
+
+        // Configura o texto inicial
+        if (htmlElement.classList.contains('dark')) {
+            toggleButton.textContent = 'Modo Escuro';
+        } else {
+            toggleButton.textContent = 'Modo Claro';
+        }
+    </script>
+
+</body>
+</html>

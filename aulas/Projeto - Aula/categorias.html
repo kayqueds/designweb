@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorias</title>
+  <link href="dist/output.css" rel="stylesheet"/> 
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+
+  <!-- Cabeçalho -->
+  <header class="bg-gray-600 text-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Categorias de Produtos</h1>
+    <nav>
+      <a href="landpage.html" class="text-gray-100 hover:text-white hover:bg-gray-700 px-4 py-2 rounded-lg transition duration-300">Voltar</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="flex-glow container mx-auto p-4 sm:p-8">
+    <section class="bg-white p-6 rounded-xl shadow-lg">
+      <h2 class="text-xl font-semibold mb-4 text-gray-700 border-b pb-2">Lista de Categorias</h2>
+      <div class="overflow-x-auto shadow-md rounded-lg border border-gray-200">
+        <table class="min-w-full">
+          <thead class="bg-gray-300">
+            <tr>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">Nome da Categoria</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">Descrição</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">Quantidade de Produtos</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaCategorias" class="bg-white [&>tr:nth-child(odd)]:bg-white [&>tr:nth-child(even)]:bg-gray-100">
+            <!-- Conteúdo inserido via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-600 text-white p-4 mt-auto">
+    <p>&copy; 2025 - Sistema de Estoque</p>
+  </footer>
+
+  <script>
+    // Exemplo de lista de categorias (poderá vir de um backend futuramente)
+    const categorias = [
+      { nome: "Eletrônicos", descricao: "Dispositivos e acessórios tecnológicos", quantidade: 34 },
+      { nome: "Vestuário", descricao: "Roupas masculinas e femininas", quantidade: 56 },
+      { nome: "Calçados", descricao: "Sapatos, tênis e sandálias", quantidade: 28 },
+      { nome: "Livros", descricao: "Literatura e materiais de estudo", quantidade: 19 },
+      { nome: "Fotografia", descricao: "Câmeras e equipamentos fotográficos", quantidade: 11 },
+      { nome: "Acessórios", descricao: "Relógios, bolsas, cintos e afins", quantidade: 22 },
+      { nome: "Tecnologia", descricao: "Hardware, software e periféricos", quantidade: 15 },
+      { nome: "Móveis", descricao: "Móveis para casa e escritório", quantidade: 12 },
+      { nome: "Utilidades", descricao: "Itens diversos de uso cotidiano", quantidade: 30 }
+    ];
+
+    // Renderiza as categorias na tabela
+    const tabela = document.getElementById("tabelaCategorias");
+    categorias.forEach(cat => {
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td class="px-6 py-4 text-gray-700">${cat.nome}</td>
+        <td class="px-6 py-4 text-gray-600">${cat.descricao}</td>
+        <td class="px-6 py-4 text-gray-600">${cat.quantidade}</td>
+      `;
+      tabela.appendChild(linha);
+    });
+  </script>
+
+</body>
+</html>

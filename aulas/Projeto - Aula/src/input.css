@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+comando para rodar o tailwindcss e gerar o arquivo css final:
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+*/

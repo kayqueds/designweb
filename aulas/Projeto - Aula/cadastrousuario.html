@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente - Dashboard</title>
+    <link href="dist/output.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100 flex h-screen overflow-hidden">
+
+    <aside class="w-64 bg-gray-900 text-gray-100 flex-shrink-0 flex flex-col
+                  fixed inset-y-0 left-0 z-20 
+                  transform -translate-x-full transition-all duration-300 ease-in-out 
+                  lg:static lg:translate-x-0 lg:flex" id="sidebar">
+        
+        <div class="h-16 flex items-center justify-between border-b border-gray-700 px-6 flex-shrink-0">
+            <h1 class="text-2xl font-extrabold text-white tracking-wider">Dashboard</h1>
+            <button class="text-gray-400 hover:text-white lg:hidden" id="menu-close-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto p-4 space-y-2">
+            
+            <a href="landpage.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition duration-150 ease-in-out text-gray-300 font-medium">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                Início
+            </a>
+            
+            <div class="menu-item">
+                <button class="menu-btn w-full flex justify-between items-center p-3 rounded-lg bg-gray-700 transition duration-150 ease-in-out text-white font-medium" aria-expanded="true" aria-controls="submenu-1">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        Usuários
+                    </span>
+                    <svg class="w-4 h-4 transition-transform duration-300 transform rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div id="submenu-1" class="submenu-content ml-6 mt-1 space-y-1 pb-2 text-gray-400 block">
+                    <a href="usuarios.html" class="block p-2 rounded-lg hover:bg-gray-800 transition duration-150 ease-in-out">Gerenciar</a>
+                    <a href="#" class="block p-2 rounded-lg bg-gray-800 text-white transition duration-150 ease-in-out">Adicionar Novo</a>
+                </div>
+            </div>
+
+            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition duration-150 ease-in-out text-gray-300 font-medium">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2h2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v2M7 7h10"></path></svg>
+                Produtos
+            </a>
+            
+            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition duration-150 ease-in-out text-gray-300 font-medium">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6m4 0V5a2 2 0 012-2h2a2 2 0 012 2v14m0 0h2m-4 0h2"></path></svg>
+                Relatórios
+            </a>
+            
+        </nav>
+    </aside>
+
+    <div class="flex flex-col flex-1 overflow-hidden">
+        
+        <header class="h-16 flex items-center justify-between bg-white shadow-md px-6 flex-shrink-0">
+            <button class="text-gray-500 hover:text-gray-700 lg:hidden" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <h2 class="text-xl font-semibold text-gray-800 hidden lg:block">Formulário de Cadastro</h2>
+            <div class="flex items-center space-x-4">
+                <span class="text-gray-600">Olá, Rafael!</span>
+                <a href="#" class="text-sm text-red-500 hover:text-red-700">Sair</a>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto p-6">
+            <div class="max-w-full mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">Cadastro de Cliente</h3>
+            
+                <form id="form-cadastro" class="space-y-6">
+                    
+                    <div class="border-b border-gray-200 pb-4">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4">Informações Pessoais</h4>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
+                                <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Ex.: João Silva"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf" class="block text-sm font-medium text-gray-700 mb-1">CPF</label>
+                                <input type="number" id="cpf" name="cpf" inputmode="numeric" pattern="\d{11}" title="Digite 11 números" placeholder="Somente números" required
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div class="form-group">
+                                <label for="nascimento" class="block text-sm font-medium text-gray-700 mb-1">Data de nascimento</label>
+                                <input type="date" id="nascimento" name="nascimento" required
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Gênero</label>
+                                <div class="flex flex-wrap gap-4 pt-1">
+                                    <label class="inline-flex items-center text-gray-600">
+                                        <input type="radio" name="genero" value="M" class="form-radio h-4 w-4 text-blue-600"> 
+                                        <span class="ml-2">Masculino</span>
+                                    </label>
+                                    <label class="inline-flex items-center text-gray-600">
+                                        <input type="radio" name="genero" value="F" class="form-radio h-4 w-4 text-blue-600"> 
+                                        <span class="ml-2">Feminino</span>
+                                    </label>
+                                    <label class="inline-flex items-center text-gray-600">
+                                        <input type="radio" name="genero" value="N" class="form-radio h-4 w-4 text-blue-600"> 
+                                        <span class="ml-2">Prefiro não informar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200 pt-4 pb-4">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4">Contato</h4>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" required autocomplete="email" placeholder="exemplo@email.com"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-0000"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferência de contato</label>
+                            <div class="flex flex-wrap gap-4 pt-1">
+                                <label class="inline-flex items-center text-gray-600">
+                                    <input type="checkbox" name="contato" value="email" class="form-checkbox h-4 w-4 text-blue-600 rounded"> 
+                                    <span class="ml-2">E-mail</span>
+                                </label>
+                                <label class="inline-flex items-center text-gray-600">
+                                    <input type="checkbox" name="contato" value="telefone" class="form-checkbox h-4 w-4 text-blue-600 rounded"> 
+                                    <span class="ml-2">Telefone</span>
+                                </label>
+                                <label class="inline-flex items-center text-gray-600">
+                                    <input type="checkbox" name="contato" value="whatsapp" class="form-checkbox h-4 w-4 text-blue-600 rounded"> 
+                                    <span class="ml-2">WhatsApp</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200 pt-4 pb-4">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4">Endereço</h4>
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                            <div class="flex-grow">
+                                <label for="cep" class="block text-sm font-medium text-gray-700 mb-1">CEP</label>
+                                <input type="number" id="cep" placeholder="Digite o CEP (ex: 01001000)"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+                            <div class="sm:self-end">
+                                <button type="button" onclick="consultarCEP()"
+                                    class="w-full sm:w-auto bg-gray-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-gray-600 transition duration-150 shadow-md">
+                                    Buscar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label for="numero" class="block text-sm font-medium text-gray-700 mb-1">Número</label>
+                                <input type="text" id="numero" name="numero" placeholder="Ex.: 123"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+                            </div>
+
+                        <div id="resultado" class="mt-4"></div>
+                        <div id="mapa" class="mt-4 min-h-auto"></div>
+                    </div>
+
+                    <div class="pt-4">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4">Dados Comerciais</h4>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="form-group">
+                                <label for="renda" class="block text-sm font-medium text-gray-700 mb-1">Renda mensal (R$)</label>
+                                <input type="number" id="renda" name="renda" step="0.01" placeholder="0,00"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dependentes" class="block text-sm font-medium text-gray-700 mb-1">Número de dependentes</label>
+                                <input type="number" id="dependentes" name="dependentes" min="0" value="0"
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="categoria" class="block text-sm font-medium text-gray-700 mb-1">Categoria de interesse</label>
+                                <select id="categoria" name="categoria"
+                                    class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                                    <option value="">Selecione</option>
+                                    <option>Eletrônicos</option>
+                                    <option>Livros</option>
+                                    <option>Casa</option>
+                                    <option>Moda</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions pt-6 flex justify-start space-x-4">
+                        <button type="reset" class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 font-semibold hover:bg-gray-100 transition duration-150">
+                            Limpar
+                        </button>
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition duration-150 shadow-md">
+                            Salvar cadastro
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>    
+</body>
+<script src="src/js/script.js"></script>
+</html>
